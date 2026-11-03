@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>William Rönnholm — UX/UI Designer</title>
+<meta name="description" content="Portfolio of William Rönnholm, UX/UI Designer at Consid with 6+ years of experience across the private and public sector.">
+<meta property="og:title" content="William Rönnholm — UX/UI Designer">
+<meta property="og:description" content="Portfolio of William Rönnholm, UX/UI Designer at Consid with 6+ years of experience across the private and public sector.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>:root{--accent:#9BA8FF}
+html{scroll-behavior:smooth}
+
+body{margin:0;background:#0A0A0B}
+a{color:#EDEDEF}a:hover{color:#FFFFFF}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+::selection{background:#9BA8FF;color:#0A0A0B}
+
+@keyframes wordIn{from{opacity:0;transform:translateY(0.5em) rotate(2deg);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(155,168,255,0.55)}70%{box-shadow:0 0 0 10px rgba(155,168,255,0)}100%{box-shadow:0 0 0 0 rgba(155,168,255,0)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes scrollCue{0%{transform:translateY(-100%)}100%{transform:translateY(220%)}}
+@keyframes drift{0%,100%{transform:translate(-10%,-6%) scale(1)}50%{transform:translate(12%,8%) scale(1.15)}}
+@keyframes rise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+
+.h-word{display:inline-block;animation:wordIn 1s cubic-bezier(.2,.7,.2,1) both}
+.fade-up{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-video{animation:fadeIn 2.4s ease both}
+.glow{animation:drift 18s ease-in-out infinite}
+.dot{animation:pulse 2.2s ease-out infinite}
+.marquee-track{animation:marquee 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.cue-bar{animation:scrollCue 1.8s cubic-bezier(.6,0,.4,1) infinite}
+
+@keyframes logoIn{from{opacity:0;transform:scale(.6) rotate(-90deg)}to{opacity:1;transform:none}}
+.logo{animation:logoIn .9s cubic-bezier(.2,.7,.2,1) both;transition:background .35s,border-color .35s,color .35s,transform .5s cubic-bezier(.2,.7,.2,1)}
+.logo .logo-w,.logo .logo-r{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.logo .logo-dot{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.logo:hover{background:#EDEDEF;border-color:#EDEDEF;color:#0A0A0B;transform:rotate(-8deg)}
+.logo:hover .logo-w{transform:translateX(-1px)}
+.logo:hover .logo-r{transform:translateX(1px)}
+.logo:hover .logo-dot{transform:translateY(-9px) scale(1.3)}
+.nav-link{color:#B4B4BC;text-decoration:none;transition:color .2s}
+.nav-link:hover{color:#FFFFFF}
+.nav-work:hover .dd,.nav-work:focus-within .dd{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.dd{opacity:0;visibility:hidden;transform:translate(-50%,-8px);transition:opacity .25s,transform .25s,visibility .25s}
+.dd a{color:#C9C9D1;text-decoration:none;transition:background .2s,color .2s}
+.dd a:hover{background:rgba(255,255,255,0.06);color:#FFFFFF}
+
+.btn-primary{transition:transform .25s cubic-bezier(.2,.7,.2,1),background .25s}
+.btn-primary:hover{transform:translateY(-2px);background:#FFFFFF;color:#0A0A0B}
+.btn-ghost{transition:border-color .25s,background .25s}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);color:#FFFFFF}
+
+.card .card-inner{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card-inner{transform:scale(1.045)}
+.card .card-media{transition:border-color .4s}
+.card:hover .card-media{border-color:rgba(155,168,255,0.45)}
+.card .card-arrow{transition:transform .4s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,border-color .3s}
+.card:hover .card-arrow{transform:rotate(-45deg);background:#EDEDEF;color:#0A0A0B;border-color:#EDEDEF}
+.card:hover{color:#EDEDEF}
+
+.social{color:#B4B4BC;text-decoration:none;transition:color .2s}
+.social:hover{color:#FFFFFF}
+.mail{text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:0% 2px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .5s cubic-bezier(.2,.7,.2,1)}
+.mail:hover{background-size:100% 2px}
+
+.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px;row-gap:72px}
+.work-grid > .card:nth-child(even){margin-top:96px}
+
+@supports (animation-timeline: view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+}
+
+@media (max-width:760px){
+  .work-grid{grid-template-columns:repeat(1,minmax(0,1fr));row-gap:56px}
+  .work-grid > .card:nth-child(even){margin-top:0}
+  .nav-links{gap:20px !important}
+  .hide-sm{display:none !important}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+</style>
+</head>
+<body>
+
+<div style="width: 100%; min-height: 100%; background: #0A0A0B; color: #EDEDEF; font-family: 'Geist', system-ui, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden">
+
+  <!-- Header -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(10,10,11,0.55); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06)">
+    <nav aria-label="Main" style="max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+      <a class="logo" href="index.html" aria-label="William Rönnholm, home" style="position: relative; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); text-decoration: none; color: #EDEDEF">
+        <span aria-hidden="true" style="display: flex; align-items: baseline; font-family: 'Geist', sans-serif; font-weight: 600; font-size: 17px; line-height: 1; letter-spacing: -0.06em">
+          <span class="logo-w" style="display: inline-block">W</span><span class="logo-r" style="display: inline-block">R</span><span class="logo-dot" style="display: inline-block; width: 5px; height: 5px; margin-left: 2px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      </a>
+      <div class="nav-links" style="display: flex; align-items: center; gap: 36px; font-size: 15px">
+        <div class="nav-work" style="position: relative">
+          <a class="nav-link" href="#work" style="display: inline-flex; align-items: center; gap: 6px; padding: 12px 0">
+            Work
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <div class="dd" style="position: absolute; top: 100%; left: 50%; width: 260px; padding: 8px; background: rgba(20,20,23,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(0,0,0,0.5)">
+            <a href="https://williamnr6.wixsite.com/my-site/halmstad-energi" target="_blank" rel="noopener" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Halmstad Energi</a>
+            <a href="https://williamnr6.wixsite.com/my-site/kommunals-a-kassa" target="_blank" rel="noopener" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Kommunals a-kassa</a>
+            <a href="https://williamnr6.wixsite.com/my-site/riksbyggen" target="_blank" rel="noopener" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Riksbyggen</a>
+            <a href="https://williamnr6.wixsite.com/my-site/praktikplatsen" target="_blank" rel="noopener" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Praktikplatsen</a>
+            <a href="https://williamnr6.wixsite.com/my-site/volvo-trucks-sews" target="_blank" rel="noopener" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Volvo Trucks — SEWS</a>
+            <a href="https://williamnr6.wixsite.com/my-site/volvo-trucks-swdt" target="_blank" rel="noopener" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Volvo Trucks — SWDT</a>
+          </div>
+        </div>
+        <a class="nav-link" href="about.html" style="padding: 12px 0">About</a>
+        <a class="btn-ghost hide-sm" href="#contact" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.16); text-decoration: none; font-size: 14px; color: #EDEDEF">Get in touch</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section aria-labelledby="hero-title" style="position: relative; min-height: 820px; margin-top: -73px; display: flex; align-items: center; overflow: hidden; background: #050506">
+    
+      <video class="hero-video" src="assets/hero-loop.mp4" autoplay muted loop playsinline preload="auto" aria-hidden="true" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9"></video>
+    
+    <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; overflow: hidden">
+      <div class="glow" style="position: absolute; left: 30%; top: 20%; width: 640px; height: 640px; border-radius: 50%; background: var(--accent); opacity: 0.07; filter: blur(140px)"></div>
+    </div>
+    <div aria-hidden="true" style="position: absolute; inset: 0; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px); background-size: 72px 72px; mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 80%); -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 80%)"></div>
+    <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 260px; pointer-events: none; background: linear-gradient(180deg, rgba(10,10,11,0) 0%, #0A0A0B 100%)"></div>
+
+    <div style="position: relative; width: 100%; max-width: 1280px; margin: 0 auto; padding: 160px 24px 120px; display: flex; flex-direction: column; gap: 32px">
+      <a class="fade-up" href="https://www.consid.com/sv/" target="_blank" rel="noopener" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px 8px 12px; border-radius: 999px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.02em; color: #C9C9D1; text-decoration: none; animation-delay: .1s; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px)">
+        <span class="dot" aria-hidden="true" style="width: 8px; height: 8px; border-radius: 50%; background: var(--accent)"></span>
+        UX/UI Designer @ Consid
+      </a>
+      <h1 id="hero-title" style="margin: 0; font-size: clamp(48px, 9vw, 128px); line-height: 0.98; font-weight: 500; letter-spacing: -0.045em">
+        <span class="h-word" style="animation-delay: .2s">Hi,</span>
+        <span class="h-word" style="animation-delay: .3s">I’m</span><br>
+        <span class="h-word" style="animation-delay: .42s; color: var(--accent)">William</span>
+        <span class="h-word" style="animation-delay: .54s">Rönnholm</span>
+      </h1>
+      <p class="fade-up" style="margin: 0; max-width: 560px; font-size: 19px; line-height: 1.6; color: #A6A6AF; animation-delay: .8s">With 6+ years of experience I have worked with a variety of customers in both the private and the public sector. Scroll down to take part of some of my recent projects.</p>
+      <div class="fade-up" style="display: flex; flex-wrap: wrap; gap: 12px; animation-delay: 1s">
+        <a class="btn-primary" href="#work" style="display: inline-flex; align-items: center; gap: 10px; min-height: 52px; padding: 0 26px; border-radius: 999px; background: #EDEDEF; color: #0A0A0B; text-decoration: none; font-weight: 500; font-size: 15px">
+          View my work
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"></path><path d="m19 12-7 7-7-7"></path></svg>
+        </a>
+        <a class="btn-ghost" href="about.html" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 26px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.18); color: #EDEDEF; text-decoration: none; font-weight: 500; font-size: 15px">About me</a>
+      </div>
+    </div>
+
+    <div class="fade-up hide-sm" aria-hidden="true" style="position: absolute; left: 50%; bottom: 40px; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 12px; animation-delay: 1.4s">
+      <span style="font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #8A8A93">Scroll</span>
+      <span style="position: relative; width: 1px; height: 48px; background: rgba(255,255,255,0.12); overflow: hidden">
+        <span class="cue-bar" style="position: absolute; left: 0; top: 0; width: 1px; height: 40%; background: #EDEDEF"></span>
+      </span>
+    </div>
+  </section>
+
+  <!-- Client marquee -->
+  <section aria-label="Clients" class="marquee" style="border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); overflow: hidden; padding: 28px 0">
+    <div class="marquee-track" style="display: flex; width: max-content; gap: 64px; padding-right: 64px; font-size: 22px; font-weight: 400; letter-spacing: -0.01em; color: #7E7E88; white-space: nowrap">
+      <span>Halmstad Energi och Miljö</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span>Kommunals a-kassa</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span>Riksbyggen</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span>Praktikplatsen.se</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span>Volvo Trucks</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span>Consid</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span aria-hidden="true">Halmstad Energi och Miljö</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span aria-hidden="true">Kommunals a-kassa</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span aria-hidden="true">Riksbyggen</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span aria-hidden="true">Praktikplatsen.se</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span aria-hidden="true">Volvo Trucks</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+      <span aria-hidden="true">Consid</span><span aria-hidden="true" style="color: var(--accent)">✦</span>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section id="work" aria-labelledby="work-title" style="max-width: 1280px; margin: 0 auto; padding: 140px 24px 120px; display: flex; flex-direction: column; gap: 72px">
+    <div class="reveal" style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 24px">
+      <div style="display: flex; flex-direction: column; gap: 16px">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">Selected work</span>
+        <h2 id="work-title" style="margin: 0; font-size: clamp(40px, 6vw, 72px); line-height: 1; font-weight: 500; letter-spacing: -0.04em">Recent projects</h2>
+      </div>
+      <p style="margin: 0; max-width: 360px; color: #A6A6AF; font-size: 16px">Public websites, internal systems and login flows — designed for real people in the private and public sector.</p>
+    </div>
+
+    <div class="work-grid">
+
+      <a class="card reveal" href="https://williamnr6.wixsite.com/my-site/halmstad-energi" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 24px; text-decoration: none; color: #EDEDEF">
+        <div class="card-media" style="position: relative; aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden; background: #10141F; border: 1px solid rgba(255,255,255,0.08)">
+          <div class="card-inner" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 10%">
+            <div style="width: 100%; height: 100%; border-radius: 12px; background: #171C2B; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
+              <div style="height: 32px; display: flex; align-items: center; gap: 6px; padding: 0 14px; border-bottom: 1px solid rgba(255,255,255,0.06)"><span style="width: 9px; height: 9px; border-radius: 50%; background: #3A3F52"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #3A3F52"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #3A3F52"></span></div>
+              <div style="flex: 1; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8FA3">[Project screenshot]</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">01 — External website</span>
+            <h3 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 500; letter-spacing: -0.02em">Halmstad Energi och Miljö AB</h3>
+          </div>
+          <span class="card-arrow" aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://williamnr6.wixsite.com/my-site/kommunals-a-kassa" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 24px; text-decoration: none; color: #EDEDEF">
+        <div class="card-media" style="position: relative; aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden; background: #1A1210; border: 1px solid rgba(255,255,255,0.08)">
+          <div class="card-inner" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 10%">
+            <div style="width: 100%; height: 100%; border-radius: 12px; background: #241A17; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
+              <div style="height: 32px; display: flex; align-items: center; gap: 6px; padding: 0 14px; border-bottom: 1px solid rgba(255,255,255,0.06)"><span style="width: 9px; height: 9px; border-radius: 50%; background: #4A3B36"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #4A3B36"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #4A3B36"></span></div>
+              <div style="flex: 1; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 13px; color: #A3928C">[Project screenshot]</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">02 — External website</span>
+            <h3 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 500; letter-spacing: -0.02em">Kommunals a-kassa</h3>
+          </div>
+          <span class="card-arrow" aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://williamnr6.wixsite.com/my-site/volvo-trucks-sews" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 24px; text-decoration: none; color: #EDEDEF">
+        <div class="card-media" style="position: relative; aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden; background: #0F1618; border: 1px solid rgba(255,255,255,0.08)">
+          <div class="card-inner" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 10%">
+            <div style="width: 100%; height: 100%; border-radius: 12px; background: #162124; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
+              <div style="height: 32px; display: flex; align-items: center; gap: 6px; padding: 0 14px; border-bottom: 1px solid rgba(255,255,255,0.06)"><span style="width: 9px; height: 9px; border-radius: 50%; background: #35474B"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #35474B"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #35474B"></span></div>
+              <div style="flex: 1; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 13px; color: #8CA0A3">[Project screenshot]</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">03 — Internal system</span>
+            <h3 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 500; letter-spacing: -0.02em">Volvo Trucks — SEWS</h3>
+          </div>
+          <span class="card-arrow" aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://williamnr6.wixsite.com/my-site/volvo-trucks-swdt" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 24px; text-decoration: none; color: #EDEDEF">
+        <div class="card-media" style="position: relative; aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden; background: #13121C; border: 1px solid rgba(255,255,255,0.08)">
+          <div class="card-inner" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 10%">
+            <div style="width: 100%; height: 100%; border-radius: 12px; background: #1C1A29; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
+              <div style="height: 32px; display: flex; align-items: center; gap: 6px; padding: 0 14px; border-bottom: 1px solid rgba(255,255,255,0.06)"><span style="width: 9px; height: 9px; border-radius: 50%; background: #403C55"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #403C55"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #403C55"></span></div>
+              <div style="flex: 1; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 13px; color: #9792AD">[Project screenshot]</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">04 — Internal system</span>
+            <h3 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 500; letter-spacing: -0.02em">Volvo Trucks — Software Documentation Tool</h3>
+          </div>
+          <span class="card-arrow" aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://williamnr6.wixsite.com/my-site/riksbyggen" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 24px; text-decoration: none; color: #EDEDEF">
+        <div class="card-media" style="position: relative; aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden; background: #111712; border: 1px solid rgba(255,255,255,0.08)">
+          <div class="card-inner" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 10%">
+            <div style="width: 100%; height: 100%; border-radius: 12px; background: #19221A; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
+              <div style="height: 32px; display: flex; align-items: center; gap: 6px; padding: 0 14px; border-bottom: 1px solid rgba(255,255,255,0.06)"><span style="width: 9px; height: 9px; border-radius: 50%; background: #394A3B"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #394A3B"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #394A3B"></span></div>
+              <div style="flex: 1; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 13px; color: #8FA391">[Project screenshot]</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">05 — New login flow</span>
+            <h3 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 500; letter-spacing: -0.02em">Riksbyggen</h3>
+          </div>
+          <span class="card-arrow" aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+        </div>
+      </a>
+
+      <a class="card reveal" href="https://williamnr6.wixsite.com/my-site/praktikplatsen" target="_blank" rel="noopener" style="display: flex; flex-direction: column; gap: 24px; text-decoration: none; color: #EDEDEF">
+        <div class="card-media" style="position: relative; aspect-ratio: 4 / 3; border-radius: 24px; overflow: hidden; background: #18140E; border: 1px solid rgba(255,255,255,0.08)">
+          <div class="card-inner" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; padding: 10%">
+            <div style="width: 100%; height: 100%; border-radius: 12px; background: #221D15; border: 1px solid rgba(255,255,255,0.08); display: flex; flex-direction: column; overflow: hidden; box-shadow: 0 30px 60px rgba(0,0,0,0.45)">
+              <div style="height: 32px; display: flex; align-items: center; gap: 6px; padding: 0 14px; border-bottom: 1px solid rgba(255,255,255,0.06)"><span style="width: 9px; height: 9px; border-radius: 50%; background: #4A4234"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #4A4234"></span><span style="width: 9px; height: 9px; border-radius: 50%; background: #4A4234"></span></div>
+              <div style="flex: 1; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-size: 13px; color: #A39A8A">[Project screenshot]</div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px">
+          <div style="display: flex; flex-direction: column; gap: 6px">
+            <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">06 — Internal system</span>
+            <h3 style="margin: 0; font-size: 26px; line-height: 1.2; font-weight: 500; letter-spacing: -0.02em">Praktikplatsen.se</h3>
+          </div>
+          <span class="card-arrow" aria-hidden="true" style="flex: none; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer id="contact" style="border-top: 1px solid rgba(255,255,255,0.06)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 120px 24px 48px; display: flex; flex-direction: column; gap: 96px">
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 28px">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">Contact</span>
+        <h2 style="margin: 0; font-size: clamp(44px, 8vw, 112px); line-height: 0.98; font-weight: 500; letter-spacing: -0.045em">Let’s work<br>together.</h2>
+        <a class="mail" href="mailto:william.ronnholm@hotmail.com" style="align-self: flex-start; font-size: clamp(20px, 2.6vw, 32px); letter-spacing: -0.02em; color: #EDEDEF; padding-bottom: 4px">william.ronnholm@hotmail.com</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 14px; color: #8A8A93">
+        <span>© 2026 William Rönnholm</span>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+          <a class="social" href="tel:+46704939909">+46 70-493 99 09</a>
+          <a class="social" href="https://www.instagram.com/williamronnholm/" target="_blank" rel="noopener">Instagram</a>
+          <a class="social" href="https://se.linkedin.com/in/william-r%C3%B6nnholm-426a73154" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
