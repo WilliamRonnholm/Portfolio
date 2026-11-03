@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — William Rönnholm</title>
+<meta name="description" content="About William Rönnholm, UX/UI Designer at Consid.">
+<meta property="og:title" content="About — William Rönnholm">
+<meta property="og:description" content="About William Rönnholm, UX/UI Designer at Consid.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>:root{--accent:#9BA8FF}
+html{scroll-behavior:smooth}
+
+body{margin:0;background:#0A0A0B}
+a{color:#EDEDEF}a:hover{color:#FFFFFF}
+*{box-sizing:border-box}
+::selection{background:#9BA8FF;color:#0A0A0B}
+
+@keyframes wordIn{from{opacity:0;transform:translateY(0.5em) rotate(2deg);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes rise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+.h-word{display:inline-block;animation:wordIn 1s cubic-bezier(.2,.7,.2,1) both}
+.fade-up{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+.ring{animation:spin 22s linear infinite}
+
+@keyframes logoIn{from{opacity:0;transform:scale(.6) rotate(-90deg)}to{opacity:1;transform:none}}
+.logo{animation:logoIn .9s cubic-bezier(.2,.7,.2,1) both;transition:background .35s,border-color .35s,color .35s,transform .5s cubic-bezier(.2,.7,.2,1)}
+.logo .logo-w,.logo .logo-r{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.logo .logo-dot{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.logo:hover{background:var(--accent,#9BA8FF);border-color:var(--accent,#9BA8FF);color:#0A0A0B !important;transform:rotate(-8deg)}
+.logo:hover .logo-w{transform:translateX(-1px)}
+.logo:hover .logo-r{transform:translateX(1px)}
+.logo:hover .logo-dot{background:#0A0A0B !important;transform:translateY(-3px) scale(1.2)}
+.nav-link{color:#B4B4BC;text-decoration:none;transition:color .2s}
+.nav-link:hover{color:#FFFFFF}
+.nav-work:hover .dd,.nav-work:focus-within .dd{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.dd{opacity:0;visibility:hidden;transform:translate(-50%,-8px);transition:opacity .25s,transform .25s,visibility .25s}
+.dd a{color:#C9C9D1;text-decoration:none;transition:background .2s,color .2s}
+.dd a:hover{background:rgba(255,255,255,0.06);color:#FFFFFF}
+.btn-ghost{transition:border-color .25s,background .25s}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);color:#FFFFFF}
+
+.chip{transition:border-color .25s,background .25s,transform .25s}
+.chip:hover{border-color:rgba(155,168,255,0.5);background:rgba(155,168,255,0.08);transform:translateY(-2px)}
+.row{transition:background .3s}
+.row:hover{background:rgba(255,255,255,0.02)}
+
+.social{color:#B4B4BC;text-decoration:none;transition:color .2s}
+.social:hover{color:#FFFFFF}
+.mail{text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:0% 2px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .5s cubic-bezier(.2,.7,.2,1)}
+.mail:hover{background-size:100% 2px}
+
+.about-row{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:32px}
+.about-row > .label{grid-column:span 4}
+.about-row > .body{grid-column:span 8}
+
+@supports (animation-timeline: view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+}
+@media (max-width:760px){
+  .about-row{grid-template-columns:repeat(1,minmax(0,1fr));row-gap:16px}
+  .about-row > .label,.about-row > .body{grid-column:auto}
+  .nav-links{gap:20px !important}
+  .hide-sm{display:none !important}
+  .intro{flex-direction:column !important;align-items:flex-start !important}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+</style>
+</head>
+<body>
+
+<div style="width: 100%; min-height: 100%; background: #0A0A0B; color: #EDEDEF; font-family: 'Geist', system-ui, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden">
+
+  <!-- Header -->
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(10,10,11,0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06)">
+    <nav aria-label="Main" style="max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+      <a class="logo" href="../" aria-label="William Rönnholm, home" style="position: relative; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); text-decoration: none; color: #EDEDEF">
+        <span aria-hidden="true" style="display: flex; align-items: baseline; font-family: 'Geist', sans-serif; font-weight: 600; font-size: 17px; line-height: 1; letter-spacing: -0.06em">
+          <span class="logo-w" style="display: inline-block">W</span><span class="logo-r" style="display: inline-block">R</span><span class="logo-dot" style="display: inline-block; width: 5px; height: 5px; margin-left: 2px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      </a>
+      <div class="nav-links" style="display: flex; align-items: center; gap: 36px; font-size: 15px">
+        <div class="nav-work" style="position: relative">
+          <a class="nav-link" href="../" style="display: inline-flex; align-items: center; gap: 6px; padding: 12px 0">
+            Work
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <div class="dd" style="position: absolute; top: 100%; left: 50%; width: 260px; padding: 8px; background: rgba(20,20,23,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(0,0,0,0.5)">
+            <a href="../halmstad-energi/" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Halmstad Energi</a>
+            <a href="../kommunals-a-kassa/" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Kommunals a-kassa</a>
+            <a href="../riksbyggen/" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Riksbyggen</a>
+            <a href="../praktikplatsen/" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Göteborgsregionen</a>
+            <a href="../volvo-trucks-sews/" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Volvo Trucks — SEWS</a>
+            <a href="../volvo-trucks-swdt/" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Volvo Trucks — SWDT</a>
+          </div>
+        </div>
+        <a class="nav-link" href="../about/" aria-current="page" style="padding: 12px 0; color: #FFFFFF">About</a>
+        <a class="btn-ghost hide-sm" href="#contact" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.16); text-decoration: none; font-size: 14px; color: #EDEDEF">Get in touch</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Intro -->
+  <section aria-labelledby="about-title" style="max-width: 1280px; margin: 0 auto; padding: 120px 24px 96px">
+    <div class="intro" style="display: flex; align-items: flex-end; justify-content: space-between; gap: 48px">
+      <div style="display: flex; flex-direction: column; gap: 24px">
+        <span class="fade-up" style="font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); animation-delay: .1s">About</span>
+        <h1 id="about-title" style="margin: 0; max-width: 980px; font-size: clamp(40px, 6.2vw, 88px); line-height: 1.04; font-weight: 500; letter-spacing: -0.045em">
+          <span class="h-word" style="animation-delay: 0.20s">Designing</span>
+          <span class="h-word" style="animation-delay: 0.29s">user-centered,</span>
+          <span class="h-word" style="animation-delay: 0.38s; color: var(--accent)">value-driven</span>
+          <span class="h-word" style="animation-delay: 0.47s">products</span>
+          <span class="h-word" style="animation-delay: 0.56s">that</span>
+          <span class="h-word" style="animation-delay: 0.65s">work.</span>
+        </h1>
+      </div>
+      <div class="fade-up" style="position: relative; flex: none; width: 240px; height: 240px; animation-delay: .6s">
+        <svg class="ring" viewBox="0 0 240 240" aria-hidden="true" style="position: absolute; inset: 0; width: 240px; height: 240px">
+          <circle cx="120" cy="120" r="116" fill="none" style="stroke: var(--accent)" stroke-width="1" stroke-dasharray="2 10" stroke-linecap="round"></circle>
+        </svg>
+        <img src="../assets/portrait.jpg" alt="Portrait of William Rönnholm" width="640" height="640" style="position: absolute; inset: 16px; border-radius: 50%; background: #17171B; border: 1px solid rgba(255,255,255,0.08); display: block; width: calc(100% - 32px); height: calc(100% - 32px); object-fit: cover; filter: grayscale(1)">
+      </div>
+    </div>
+  </section>
+
+  <!-- Sections -->
+  <section aria-label="About details" style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px; display: flex; flex-direction: column">
+
+    <div class="about-row row reveal" style="padding: 56px 0; border-top: 1px solid rgba(255,255,255,0.08)">
+      <div class="label" style="display: flex; gap: 16px; align-items: baseline">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">01</span>
+        <h2 style="margin: 0; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">General</h2>
+      </div>
+      <p class="body" style="margin: 0; font-size: 20px; line-height: 1.65; color: #B9B9C1">I am William Rönnholm, a 32 year old UX/UI designer. I have a passion for creating user-centered designs that are both beautiful and functional. My focus is on developing intuitive and engaging user experiences that meet business objectives. In my free time, I enjoy travelling, working out, football and learning new design tools and techniques.</p>
+    </div>
+
+    <div class="about-row row reveal" style="padding: 56px 0; border-top: 1px solid rgba(255,255,255,0.08)">
+      <div class="label" style="display: flex; gap: 16px; align-items: baseline">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">02</span>
+        <h2 style="margin: 0; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">Experience</h2>
+      </div>
+      <p class="body" style="margin: 0; font-size: 20px; line-height: 1.65; color: #B9B9C1">I have several years of experience in UX/UI design, working with both small startups and large corporations. My previous projects have included designing web and internal systems. I am skilled in user research, wireframing, prototyping and visual design, and experienced in collaborating with cross-functional teams, including developers, product managers and business stakeholders.</p>
+    </div>
+
+    <div class="about-row row reveal" style="padding: 56px 0; border-top: 1px solid rgba(255,255,255,0.08)">
+      <div class="label" style="display: flex; gap: 16px; align-items: baseline">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">03</span>
+        <h2 style="margin: 0; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">Skills &amp; tools</h2>
+      </div>
+      <div class="body" style="display: flex; flex-direction: column; gap: 28px">
+        <p style="margin: 0; font-size: 20px; line-height: 1.65; color: #B9B9C1">I am proficient in a range of design tools, including Figma, and AI-powered tools such as Claude to support design exploration, ideation and prototyping. I also have a strong understanding of design principles, including typography, colour theory and layout.</p>
+        <ul aria-label="Skills" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 10px">
+          <li class="chip" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 15px">User research</li>
+          <li class="chip" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 15px">Wireframing</li>
+          <li class="chip" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 15px">Prototyping</li>
+          <li class="chip" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 15px">Visual design</li>
+          <li class="chip" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 15px">Design systems</li>
+          <li class="chip" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 15px">Typography</li>
+          <li class="chip" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 15px">Figma</li>
+          <li class="chip" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 15px">Claude</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-row row reveal" style="padding: 56px 0; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08)">
+      <div class="label" style="display: flex; gap: 16px; align-items: baseline">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 13px; color: #8A8A93">04</span>
+        <h2 style="margin: 0; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">Contact</h2>
+      </div>
+      <p class="body" style="margin: 0; font-size: 20px; line-height: 1.65; color: #B9B9C1">Feel free to explore my portfolio and get in touch if you have any questions or would like to work together.</p>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer id="contact" style="border-top: 1px solid rgba(255,255,255,0.06)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 120px 24px 48px; display: flex; flex-direction: column; gap: 96px">
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 28px">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">Contact</span>
+        <h2 style="margin: 0; font-size: clamp(44px, 8vw, 112px); line-height: 0.98; font-weight: 500; letter-spacing: -0.045em">Let’s work<br>together.</h2>
+        <a class="mail" href="mailto:william.ronnholm@hotmail.com" style="align-self: flex-start; font-size: clamp(20px, 2.6vw, 32px); letter-spacing: -0.02em; color: #EDEDEF; padding-bottom: 4px">william.ronnholm@hotmail.com</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 14px; color: #8A8A93">
+        <span>© 2026 William Rönnholm</span>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+          <a class="social" href="tel:+46704939909">+46 70-493 99 09</a>
+          <a class="social" href="https://www.instagram.com/williamronnholm/" target="_blank" rel="noopener">Instagram</a>
+          <a class="social" href="https://se.linkedin.com/in/william-r%C3%B6nnholm-426a73154" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
