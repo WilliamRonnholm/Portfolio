@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Volvo Trucks — William Rönnholm</title>
+<meta name="description" content="Creation of an internal tool for emission-related information. A case study by William Rönnholm, UX/UI Designer.">
+<meta property="og:title" content="Volvo Trucks — William Rönnholm">
+<meta property="og:image" content="https://static.wixstatic.com/media/51fe62_aa330f09d9684533aedd2549a5eb42df~mv2.png/v1/fit/w_1200,h_1200,q_90,enc_auto/aa330f09d9684533aedd2549a5eb42df.png">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>:root{--accent:#9BA8FF}
+html{scroll-behavior:smooth}
+
+body{margin:0;background:#0A0A0B}
+a{color:#EDEDEF}a:hover{color:#FFFFFF}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+::selection{background:#9BA8FF;color:#0A0A0B}
+
+@keyframes wordIn{from{opacity:0;transform:translateY(0.5em) rotate(2deg);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(155,168,255,0.55)}70%{box-shadow:0 0 0 10px rgba(155,168,255,0)}100%{box-shadow:0 0 0 0 rgba(155,168,255,0)}}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@keyframes scrollCue{0%{transform:translateY(-100%)}100%{transform:translateY(220%)}}
+@keyframes drift{0%,100%{transform:translate(-10%,-6%) scale(1)}50%{transform:translate(12%,8%) scale(1.15)}}
+@keyframes rise{from{opacity:0;transform:translateY(48px)}to{opacity:1;transform:none}}
+
+.h-word{display:inline-block;animation:wordIn 1s cubic-bezier(.2,.7,.2,1) both}
+.fade-up{animation:fadeUp .9s cubic-bezier(.2,.7,.2,1) both}
+.hero-video{animation:fadeIn 2.4s ease both}
+.glow{animation:drift 18s ease-in-out infinite}
+.dot{animation:pulse 2.2s ease-out infinite}
+.marquee-track{animation:marquee 38s linear infinite}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.cue-bar{animation:scrollCue 1.8s cubic-bezier(.6,0,.4,1) infinite}
+
+@keyframes logoIn{from{opacity:0;transform:scale(.6) rotate(-90deg)}to{opacity:1;transform:none}}
+.logo{animation:logoIn .9s cubic-bezier(.2,.7,.2,1) both;transition:background .35s,border-color .35s,color .35s,transform .5s cubic-bezier(.2,.7,.2,1)}
+.logo .logo-w,.logo .logo-r{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.logo .logo-dot{transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.logo:hover{background:#EDEDEF;border-color:#EDEDEF;color:#0A0A0B;transform:rotate(-8deg)}
+.logo:hover .logo-w{transform:translateX(-1px)}
+.logo:hover .logo-r{transform:translateX(1px)}
+.logo:hover .logo-dot{transform:translateY(-9px) scale(1.3)}
+.nav-link{color:#B4B4BC;text-decoration:none;transition:color .2s}
+.nav-link:hover{color:#FFFFFF}
+.nav-work:hover .dd,.nav-work:focus-within .dd{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.dd{opacity:0;visibility:hidden;transform:translate(-50%,-8px);transition:opacity .25s,transform .25s,visibility .25s}
+.dd a{color:#C9C9D1;text-decoration:none;transition:background .2s,color .2s}
+.dd a:hover{background:rgba(255,255,255,0.06);color:#FFFFFF}
+
+.btn-primary{transition:transform .25s cubic-bezier(.2,.7,.2,1),background .25s}
+.btn-primary:hover{transform:translateY(-2px);background:#FFFFFF;color:#0A0A0B}
+.btn-ghost{transition:border-color .25s,background .25s}
+.btn-ghost:hover{border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.05);color:#FFFFFF}
+
+.card .card-inner{transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.card:hover .card-inner{transform:scale(1.045)}
+.card .card-media{transition:border-color .4s}
+.card:hover .card-media{border-color:rgba(155,168,255,0.45)}
+.card .card-arrow{transition:transform .4s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,border-color .3s}
+.card:hover .card-arrow{transform:rotate(-45deg);background:#EDEDEF;color:#0A0A0B;border-color:#EDEDEF}
+.card:hover{color:#EDEDEF}
+
+.social{color:#B4B4BC;text-decoration:none;transition:color .2s}
+.social:hover{color:#FFFFFF}
+.mail{text-decoration:none;background-image:linear-gradient(currentColor,currentColor);background-size:0% 2px;background-repeat:no-repeat;background-position:0 100%;transition:background-size .5s cubic-bezier(.2,.7,.2,1)}
+.mail:hover{background-size:100% 2px}
+
+.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:32px;row-gap:72px}
+
+@supports (animation-timeline: view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% cover 28%}
+}
+
+@media (max-width:760px){
+  .work-grid{grid-template-columns:repeat(1,minmax(0,1fr));row-gap:56px}
+  .nav-links{gap:20px !important}
+  .hide-sm{display:none !important}
+}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none !important;transition:none !important}
+}
+
+@keyframes heroIn{from{opacity:0;transform:translateY(40px) scale(.98);clip-path:inset(12% 6% 0 6% round 28px)}to{opacity:1;transform:none;clip-path:inset(0 0 0 0 round 28px)}}
+.hero-img{animation:heroIn 1.2s cubic-bezier(.2,.7,.2,1) .35s both}
+.back{color:#B4B4BC;text-decoration:none;transition:color .2s,gap .3s}
+.back:hover{color:#FFFFFF;gap:14px !important}
+.tag{transition:border-color .25s,background .25s}
+.tag:hover{border-color:rgba(155,168,255,0.5);background:rgba(155,168,255,0.08)}
+.next{text-decoration:none;color:#EDEDEF}
+.next .next-title{transition:color .3s}
+.next:hover .next-title{color:var(--accent)}
+.next .next-arrow{transition:transform .5s cubic-bezier(.2,.7,.2,1),background .3s,color .3s,border-color .3s}
+.next:hover .next-arrow{transform:translateX(8px) rotate(-45deg);background:#EDEDEF;color:#0A0A0B;border-color:#EDEDEF}
+.shot img{transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.shot:hover img{transform:scale(1.02)}
+.cs-grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:32px;row-gap:24px}
+.cs-label{grid-column:span 4}
+.cs-body{grid-column:span 8}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.gallery .shot:first-child:nth-last-child(odd){grid-column:1 / -1}
+.meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.cs-title::first-letter{text-transform:uppercase}
+@media (max-width:760px){
+  .cs-grid,.gallery,.meta{grid-template-columns:repeat(1,minmax(0,1fr))}
+  .cs-label,.cs-body{grid-column:auto}
+  .gallery .shot:first-child:nth-last-child(odd){grid-column:auto}
+}
+</style>
+</head>
+<body>
+<div style="width: 100%; min-height: 100%; background: #0A0A0B; color: #EDEDEF; font-family: 'Geist', system-ui, sans-serif; font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden">
+
+  <header style="position: sticky; top: 0; z-index: 50; background: rgba(10,10,11,0.55); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255,255,255,0.06)">
+    <nav aria-label="Main" style="max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 24px">
+      <a class="logo" href="index.html" aria-label="William Rönnholm, home" style="position: relative; display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.18); text-decoration: none; color: #EDEDEF">
+        <span aria-hidden="true" style="display: flex; align-items: baseline; font-family: 'Geist', sans-serif; font-weight: 600; font-size: 17px; line-height: 1; letter-spacing: -0.06em">
+          <span class="logo-w" style="display: inline-block">W</span><span class="logo-r" style="display: inline-block">R</span><span class="logo-dot" style="display: inline-block; width: 5px; height: 5px; margin-left: 2px; border-radius: 50%; background: var(--accent)"></span>
+        </span>
+      </a>
+      <div class="nav-links" style="display: flex; align-items: center; gap: 36px; font-size: 15px">
+        <div class="nav-work" style="position: relative">
+          <a class="nav-link" href="index.html#work" style="display: inline-flex; align-items: center; gap: 6px; padding: 12px 0">
+            Work
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"></path></svg>
+          </a>
+          <div class="dd" style="position: absolute; top: 100%; left: 50%; width: 260px; padding: 8px; background: rgba(20,20,23,0.92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; display: flex; flex-direction: column; box-shadow: 0 24px 60px rgba(0,0,0,0.5)">
+            <a href="halmstad-energi.html" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Halmstad Energi</a>
+            <a href="kommunals-a-kassa.html" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Kommunals a-kassa</a>
+            <a href="riksbyggen.html" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Riksbyggen</a>
+            <a href="praktikplatsen.html" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Göteborgsregionen</a>
+            <a href="volvo-trucks-sews.html" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Volvo Trucks — SEWS</a>
+            <a href="volvo-trucks-swdt.html" style="padding: 10px 14px; border-radius: 10px; font-size: 14px">Volvo Trucks — SWDT</a>
+          </div>
+        </div>
+        <a class="nav-link" href="about.html" style="padding: 12px 0">About</a>
+        <a class="btn-ghost hide-sm" href="#contact" style="padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.16); text-decoration: none; font-size: 14px; color: #EDEDEF">Get in touch</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+  <section aria-labelledby="cs-title" style="max-width: 1280px; margin: 0 auto; padding: 72px 24px 56px; display: flex; flex-direction: column; gap: 40px">
+    <a class="back fade-up" href="index.html#work" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 10px; font-size: 15px; min-height: 44px; animation-delay: .05s">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5"></path><path d="m12 19-7-7 7-7"></path></svg>
+      All work
+    </a>
+    <div style="display: flex; flex-direction: column; gap: 24px">
+      <span class="fade-up" style="font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); animation-delay: .1s">04 / 06 — Volvo Trucks</span>
+      <h1 id="cs-title" class="cs-title fade-up" style="margin: 0; max-width: 1080px; font-size: clamp(40px, 6.4vw, 88px); line-height: 1.02; font-weight: 500; letter-spacing: -0.04em; animation-delay: .18s">Creation of an internal tool for emission-related information</h1>
+    </div>
+    <dl class="meta fade-up" style="margin: 0; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.08); animation-delay: .3s">
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <dt style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8A93">Client</dt>
+        <dd style="margin: 0; font-size: 17px">Volvo Trucks</dd>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <dt style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8A93">Type</dt>
+        <dd style="margin: 0; font-size: 17px">Internal system</dd>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8px">
+        <dt style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8A93">Role</dt>
+        <dd style="margin: 0; font-size: 17px">UX/UI Designer</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section aria-label="Main project image" style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px">
+    <figure class="hero-img shot" style="margin: 0; border-radius: 28px; overflow: hidden; background: #141417; border: 1px solid rgba(255,255,255,0.08)">
+      <img src="https://static.wixstatic.com/media/51fe62_aa330f09d9684533aedd2549a5eb42df~mv2.png/v1/fit/w_2000,h_2000,q_90,enc_auto/aa330f09d9684533aedd2549a5eb42df.png" alt="Volvo Trucks — main design" style="display: block; width: 100%; height: auto">
+    </figure>
+  </section>
+
+  <section aria-labelledby="overview-title" style="max-width: 1280px; margin: 0 auto; padding: 0 24px 120px">
+    <div class="cs-grid reveal">
+      <div class="cs-label" style="display: flex; flex-direction: column; gap: 28px">
+        <h2 id="overview-title" style="margin: 0; font-size: 28px; font-weight: 500; letter-spacing: -0.02em">Overview</h2>
+        <div style="display: flex; flex-direction: column; gap: 14px">
+          <span style="font-family: 'Geist Mono', monospace; font-size: 12px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8A93">Services &amp; tools</span>
+          <ul aria-label="Services and tools" style="list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px">
+              <li class="tag" style="padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 14px; color: #D4D4DA">UX/UI Design</li>
+              <li class="tag" style="padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 14px; color: #D4D4DA">Web development</li>
+              <li class="tag" style="padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 14px; color: #D4D4DA">Design System</li>
+              <li class="tag" style="padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 14px; color: #D4D4DA">Wireframing</li>
+              <li class="tag" style="padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 14px; color: #D4D4DA">User Research</li>
+              <li class="tag" style="padding: 8px 14px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.12); font-size: 14px; color: #D4D4DA">Prototyping</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cs-body" style="display: flex; flex-direction: column; gap: 28px">
+          <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #B9B9C1">Volvo Trucks is a division of the Swedish automotive manufacturer Volvo Group, specializing in the production of heavy-duty commercial vehicles. Established in 1928, Volvo Trucks has since become one of the world&#x27;s leading manufacturers of trucks, buses, and construction equipment.</p>
+          <p style="margin: 0; font-size: 20px; line-height: 1.7; color: #B9B9C1">Volvo wanted to create an internal tool to handle emission-related documentation that comes from associated developed software for the trucks. The goal of the tool was to improve tracking of version history but also the general use and navigation of the documentation.</p>
+          <div style="display: flex; align-items: flex-start; gap: 16px; padding: 20px 24px; border-radius: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex: none; margin-top: 3px; color: #8A8A93"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
+            <p style="margin: 0; font-size: 16px; line-height: 1.6; color: #A6A6AF">Due to safety regulations and signing of an NDA no further information about the project can be shared.</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section aria-label="Next project" style="border-top: 1px solid rgba(255,255,255,0.06)">
+    <a class="next reveal" href="riksbyggen.html" style="max-width: 1280px; margin: 0 auto; padding: 96px 24px; display: flex; align-items: center; justify-content: space-between; gap: 32px">
+      <span style="display: flex; flex-direction: column; gap: 14px">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: #8A8A93">Next project</span>
+        <span class="next-title" style="font-size: clamp(36px, 6vw, 80px); line-height: 1; font-weight: 500; letter-spacing: -0.04em">Riksbyggen</span>
+      </span>
+      <span class="next-arrow" aria-hidden="true" style="flex: none; width: 72px; height: 72px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.16); display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+    </a>
+  </section>
+  </main>
+
+  <footer id="contact" style="border-top: 1px solid rgba(255,255,255,0.06)">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 120px 24px 48px; display: flex; flex-direction: column; gap: 96px">
+      <div class="reveal" style="display: flex; flex-direction: column; gap: 28px">
+        <span style="font-family: 'Geist Mono', monospace; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent)">Contact</span>
+        <h2 style="margin: 0; font-size: clamp(44px, 8vw, 112px); line-height: 0.98; font-weight: 500; letter-spacing: -0.045em">Let’s work<br>together.</h2>
+        <a class="mail" href="mailto:william.ronnholm@hotmail.com" style="align-self: flex-start; font-size: clamp(20px, 2.6vw, 32px); letter-spacing: -0.02em; color: #EDEDEF; padding-bottom: 4px">william.ronnholm@hotmail.com</a>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 24px; padding-top: 32px; border-top: 1px solid rgba(255,255,255,0.06); font-size: 14px; color: #8A8A93">
+        <span>© 2026 William Rönnholm</span>
+        <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 28px">
+          <a class="social" href="tel:+46704939909">+46 70-493 99 09</a>
+          <a class="social" href="https://www.instagram.com/williamronnholm/" target="_blank" rel="noopener">Instagram</a>
+          <a class="social" href="https://se.linkedin.com/in/william-r%C3%B6nnholm-426a73154" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
